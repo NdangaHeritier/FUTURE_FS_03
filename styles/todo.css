@@ -1,0 +1,217 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+.container{
+    background: linear-gradient(90deg,rgb(1, 18, 34), rgb(2, 59, 97));
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-card{
+    background-color: rgb(214, 231, 247);
+    padding: 20px;
+    border-radius: 20px;
+    width: auto;
+}
+
+.header{
+    padding: 10px 0px;
+}
+.logo{
+    font-size: 25px;
+    font-weight: 800;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.logo .fa-circle{
+    color: rgb(2, 32, 59);
+}
+.todo-content{
+    padding: 20px 0px;
+}
+.input-group{    
+    background-color: rgba(1, 18, 34, 0.103);
+    padding: 0px;
+    border-radius: 50px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+}
+.todo-input{
+    padding: 5px 20px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    font-size: 15px;
+    color: rgb(46, 47, 48);
+}
+.todo-time{
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    margin: 2px 0px;
+    background-color: rgb(166, 198, 228);
+    border-radius: 20px;
+}
+.todo-button{
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: rgb(5, 67, 124);
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    color: rgb(132, 159, 185);
+}
+.todo-button:hover{
+    opacity: 0.8;
+}
+
+.todo-list{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.no-items{
+    display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.no-items-text{
+    color: grey;
+}
+.strike{
+    text-decoration: line-through;
+}
+.fa-cloud{
+    position: absolute;
+    color: rgb(132, 171, 207);    
+    animation: dance 2s 0.1s infinite ease-in;
+    transition: 1s infinite ease-in;
+    
+}
+.c1{
+    top: 2rem;
+    right: 2rem;
+}
+.c2{
+    top: 2rem;
+    left: 2rem;
+    color: rgb(207, 132, 201); 
+}
+.c3{
+    bottom: 2rem;
+    right: 2rem;
+    color: rgb(207, 132, 201);
+}
+.c4{
+    bottom: 2rem;
+    left: 2rem;
+    color: rgb(200, 207, 132);
+}
+.c5{
+    top: 50%;
+    right: 20%;
+}
+.c6{
+    top: 50%;
+    left: 20%;
+    color: rgb(207, 132, 142);
+}
+.no-items span{
+    font-size: 40px;
+    color: rgb(126, 150, 172);
+}
+@keyframes dance {
+    from{
+        transform: rotate(0deg);
+        text-shadow: 2px 2px 1px rgb(1, 18, 34);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+}
+.mark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+.complete{
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    padding: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(71, 173, 3);
+}
+.progress{
+    border: 0;
+    outline: 0;
+    font-size: 20px;
+    padding: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(126, 150, 172);
+}
+.item-text{
+    color: rgb(41, 56, 71);
+    font-size: 15px;
+    flex: 2;
+    padding: 0px 5px;
+    max-width: 300px;
+}
+.item-actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+.item-time{
+    color: rgb(1, 18, 34);
+    padding: 0px 5px;
+}
+.remove-item{
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: grey;
+    font-size: 18px;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(194, 213, 233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+.remove-item:hover{
+    color: rgb(1, 18, 34);
+    background-color: rgb(132, 171, 207);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="styles/css/all.min.css">
+    <link rel="stylesheet" href="styles/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="styles/todo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <span class="fas fa-cloud c1"></span>       
+        <span class="fas fa-cloud c2"></span>
+        <span class="fas fa-cloud c3"></span>
+        <span class="fas fa-cloud c4"></span>
+        <span class="far fa-cloud fa-clock c5"></span>
+        <span class="far fa-cloud fa-clock c6"></span>
+        <div class="todo-card">
+            <div class="header">
+                <div class="logo">
+                    <span class="fas fa-circle"></span>Todo App
+                </div>
+            </div>
+            <div class="todo-content">
+                <form action="" method="post" onsubmit="addTask(event)" class="todo-form">
+                    <div class="input-group">
+                        <input type="text" class="todo-input" required placeholder="enter activity.">
+                        <input type="time" class="todo-time" required>
+                        <button class="todo-button">
+                            <span class="fas fa-plus"></span>
+                            ADD
+                        </button>
+                    </div>
+                </form>
+                <div class="todo-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="JS/todo.js"></script>
+</body>
+</html>
