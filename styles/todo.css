@@ -5,6 +5,14 @@ body{
     font-style: normal;
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(145, 174, 184);
+    border-radius: 20px;
+    
+}
 .container{
     background: linear-gradient(90deg,rgb(1, 18, 34), rgb(2, 59, 97));
     height: 100vh;
@@ -40,14 +48,16 @@ body{
     padding: 20px 0px;
 }
 .input-group{    
-    background-color: rgba(1, 18, 34, 0.103);
-    padding: 0px;
+    background-color: rgb(199, 225, 250);
+    padding: 2px 5px;
     border-radius: 50px;
     display: flex;
     overflow: hidden;
     align-items: center;
     justify-content: space-between;
     gap: 2px;
+    border: 1px solid rgba(1, 18, 34, 0.1);
+    margin-bottom: 1rem;
 }
 .todo-input{
     padding: 5px 20px;
@@ -55,7 +65,10 @@ body{
     outline: 0;
     background-color: transparent;
     font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
     color: rgb(46, 47, 48);
+    width: 100%;
 }
 .todo-time{
     padding: 10px;
@@ -64,6 +77,7 @@ body{
     margin: 2px 0px;
     background-color: rgb(166, 198, 228);
     border-radius: 20px;
+    border: 1px solid rgba(1, 18, 34, 0.1);
 }
 .todo-button{
     padding: 12px 20px;
@@ -72,6 +86,10 @@ body{
     background-color: rgb(5, 67, 124);
     border: 0;
     outline: 0;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
     border-radius: 30px;
     cursor: pointer;
     color: rgb(132, 159, 185);
@@ -85,6 +103,8 @@ body{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-height: 350px;
+    overflow: auto;
 }
 
 .no-items{
@@ -234,11 +254,12 @@ body{
     .input-group{
         flex-wrap: wrap;
         justify-content: end;
-        height: 45px;
+        /* height: 45px; */
         padding: 5px;
         overflow:visible;
-        margin-bottom: 3rem;
-        gap: 1rem;
+        margin-bottom: 2rem;
+        gap: 5px;
+        border-radius: 10px;
     }
     .todo-input{
         height: 40px;
