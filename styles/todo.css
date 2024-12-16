@@ -19,6 +19,8 @@ body{
     padding: 20px;
     border-radius: 20px;
     width: auto;
+    z-index: 999;
+    position: relative;
 }
 
 .header{
@@ -100,10 +102,11 @@ body{
     text-decoration: line-through;
 }
 .fa-cloud{
-    position: absolute;
+    position: fixed;
     color: rgb(132, 171, 207);    
     animation: dance 2s 0.1s infinite ease-in;
     transition: 1s infinite ease-in;
+    z-index: 1;
     
 }
 .c1{
@@ -127,11 +130,11 @@ body{
 }
 .c5{
     top: 50%;
-    right: 20%;
+    right: 15%;
 }
 .c6{
     top: 50%;
-    left: 20%;
+    left: 15%;
     color: rgb(207, 132, 142);
 }
 .no-items span{
@@ -214,4 +217,74 @@ body{
 .remove-item:hover{
     color: rgb(1, 18, 34);
     background-color: rgb(132, 171, 207);
+}
+
+/* Making css for small screens and devices.. */
+
+@media screen and (max-width: 478px) {
+    .container{
+        display: block;
+        padding: 5rem 10px;
+    }
+    .todo-card{
+        width: auto;
+        z-index: 999;
+        position: relative;
+    }
+    .input-group{
+        flex-wrap: wrap;
+        justify-content: end;
+        height: 45px;
+        padding: 5px;
+        overflow:visible;
+        margin-bottom: 3rem;
+        gap: 1rem;
+    }
+    .todo-input{
+        height: 40px;
+    }
+    .fa-cloud{
+        z-index: 1;
+    }
+    .c5{        
+        top: 2.2rem;
+        left: 45%;
+        right: auto;
+    }
+    .c1{
+        top: 1rem;
+        right: 20%;
+        left: 20%;
+    }
+    .c2{
+        top: 1.5rem;
+        right: 35%;
+        left: 35%;
+        color: rgb(207, 132, 201); 
+    }
+
+    .c6{
+        top: auto;
+        bottom: 4rem;
+        right: 30%;
+        left: 30%;
+    }
+    .c7{
+        top: auto;
+        bottom: 3rem;
+        right: 35%;
+        left: 35%;
+    }
+    .c4{
+        top: auto;
+        bottom: 2rem;
+        right: 40%;
+        left: 40%;
+    }
+    .c3{
+        top: auto;
+        bottom: 1rem;
+        right: 45%;
+        left: 45%;
+    }
 }
