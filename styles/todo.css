@@ -48,7 +48,7 @@ body{
     padding: 20px 0px;
 }
 .input-group{    
-    background-color: rgb(199, 225, 250);
+    background-color: rgb(192, 225, 231);
     padding: 2px 5px;
     border-radius: 50px;
     display: flex;
@@ -244,10 +244,11 @@ body{
 @media screen and (max-width: 478px) {
     .container{
         display: block;
-        padding: 5rem 10px;
+        padding: 5rem 0px;
     }
     .todo-card{
         width: auto;
+        margin: auto;
         z-index: 999;
         position: relative;
     }
