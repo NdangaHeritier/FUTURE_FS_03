@@ -47,6 +47,28 @@ body{
 .todo-content{
     padding: 20px 0px;
 }
+.what{
+    font-weight: 900;
+    font-size: 20px;
+    position: absolute;
+    left: 1rem;
+    top: 40%;
+    color: ;
+    text-shadow: 0px 0px 100px rgb(126, 150, 172);
+    transform: rotate(-80deg);
+}
+.mobile{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+.mobile-button{
+    background-color: rgb(116, 116, 116);
+    border-radius: 20px;
+    width: 100px;
+    padding: 5px;
+}
 .input-group{    
     background-color: rgb(192, 225, 231);
     padding: 2px 5px;
@@ -245,12 +267,27 @@ body{
     .container{
         display: block;
         padding: 5rem 0px;
+        position: relative;
     }
     .todo-card{
         width: auto;
         margin: auto;
+        border-radius: 20px 20px 0px 0px;
         z-index: 999;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        animation: appear 1s 1 ease-in;
+    }
+    .mobile{
+        display: flex;
+    }
+    @keyframes appear {
+        from{
+            bottom: -100%;
+        }
+        to{
+            bottom: 0;
+        }
     }
     .input-group{
         flex-wrap: wrap;
@@ -268,45 +305,67 @@ body{
     .fa-cloud{
         z-index: 1;
     }
-    .c5{        
-        top: 2.2rem;
-        left: 45%;
-        right: auto;
-    }
     .c1{
-        top: 1rem;
-        right: 20%;
-        left: 20%;
+        top: 2rem;
+        right: auto;
+        left: 35%;
     }
     .c2{
-        top: 1.5rem;
+        top: 2rem;
         right: 35%;
-        left: 35%;
+        left: auto;
         color: rgb(207, 132, 201); 
+    }
+    .c5{        
+        top: 5rem;
+        left: 35%;
+        right: auto;
     }
 
     .c6{
-        top: auto;
-        bottom: 4rem;
-        right: 30%;
-        left: 30%;
+        top: 5rem;
+        right: auto;
+        left: 48%;
     }
     .c7{
-        top: auto;
-        bottom: 3rem;
+        top: 5rem;
         right: 35%;
-        left: 35%;
+        left: auto;
     }
     .c4{
-        top: auto;
-        bottom: 2rem;
-        right: 40%;
-        left: 40%;
+        top: 8rem;
+        right: auto;
+        left: 35%;
+        bottom: auto;
     }
     .c3{
-        top: auto;
-        bottom: 1rem;
-        right: 45%;
-        left: 45%;
+        top: 8rem;
+        right: 35%;
+        left: auto;
+        bottom: auto;
+    }
+    .c1, .c4{
+        animation: fleft 4s infinite ease-in;
+    }
+    .c2, .c3{
+        animation: fright 4s infinite ease-out;
+    }
+    @keyframes fleft {
+        from{
+            left: 0%;
+        }
+        to{
+            left: 100%;
+            top: 5rem;
+        }
+    }
+    @keyframes fright {
+        from{
+            right: 0;
+        }
+        to{
+            right: 100%;
+            top: 5rem;
+        }
     }
 }
